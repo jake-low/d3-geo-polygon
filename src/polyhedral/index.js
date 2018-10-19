@@ -93,7 +93,8 @@ export default function(tree, face) {
   polygon.push(polygon[0]);
   proj.preclip(clipPolygon({ type: "Polygon", coordinates: [ polygon ] }));
   proj.tree = function() { return tree; };
-  
+  proj.face = face;
+
   return proj;
 }
 
